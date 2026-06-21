@@ -46,7 +46,15 @@
   </div>
 
   <section class="hero">
-    <img class="hero__bg" src="assets/images/Nightfish-Horiztonal-Poster.jpg" alt="Nightfish horizontal poster" width="1920" height="957" />
+    <img class="hero__bg"
+      src="assets/images/Nightfish-Horiztonal-Poster.jpg"
+      srcset="
+        assets/images/optimized/Nightfish-Horiztonal-Poster-400w.jpg 400w,
+        assets/images/optimized/Nightfish-Horiztonal-Poster-800w.jpg 800w,
+        assets/images/optimized/Nightfish-Horiztonal-Poster-1200w.jpg 1200w,
+        assets/images/Nightfish-Horiztonal-Poster.jpg 1920w"
+      sizes="100vw"
+      alt="Nightfish horizontal poster" width="1920" height="957" />
     <div class="hero__overlay" aria-hidden="true"></div>
     <div class="hero__inner">
       <h1 class="hero__title">NIGHTFISH</h1>

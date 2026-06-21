@@ -299,6 +299,13 @@ img {
 
 /* ─── RESPONSIVE ─── */
 
+/* Touch devices: disable gallery hover zoom */
+@media (hover: none) {
+  .gallery figure img {
+    transform: none !important;
+  }
+}
+
 @media (max-width: 640px) {
   .site-nav {
     display: none;
@@ -315,6 +322,18 @@ img {
     justify-content: center;
   }
 
+  /* Larger tap targets for mobile nav overlay */
+  .nav-overlay a {
+    padding: 10px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-overlay {
+    overflow-y: auto;
+  }
+
   .hero {
     min-height: 400px;
   }
@@ -323,18 +342,32 @@ img {
     letter-spacing: 12px;
   }
 
+  /* Improve legibility of white text on image */
+  .hero__desc {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    line-height: 1.85;
+  }
+
   .gallery {
     grid-template-columns: 1fr;
   }
 
-  .footer-inner {
-    flex-direction: column;
-    gap: 16px;
+  /* Full-width tap-friendly donate button */
+  .btn {
+    display: block;
+    width: 100%;
     text-align: center;
   }
+}
 
-  .social-links {
-    justify-content: center;
+@media (max-width: 400px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .site-main {
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
   }
 }
 
